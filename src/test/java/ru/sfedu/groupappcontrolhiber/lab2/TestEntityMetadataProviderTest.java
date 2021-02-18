@@ -64,6 +64,6 @@ class TestEntityMetadataProviderTest {
     @Test
     void getById(){
         TestEntityMetadataProvider instance = new TestEntityMetadataProvider();
-        log.info(instance.getById(25L));
+        log.info(instance.getById(1L));
     }
 }

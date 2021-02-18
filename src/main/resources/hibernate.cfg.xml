@@ -18,5 +18,12 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
         <mapping class="ru.sfedu.groupappcontrolhiber.lab2.TestEntity"/>
+
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.models.Employee"/>
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.models.Developer"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.models.Tester"/>-->
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.models.Task"/>
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.models.DevelopersTask"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.models.TestersTask"/>-->
     </session-factory>
 </hibernate-configuration>

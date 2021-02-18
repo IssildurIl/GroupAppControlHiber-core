@@ -12,7 +12,7 @@ import java.util.Date;
 public class TestEntity implements Serializable {
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @Column(name = "NAME",nullable = false)
     String name;
