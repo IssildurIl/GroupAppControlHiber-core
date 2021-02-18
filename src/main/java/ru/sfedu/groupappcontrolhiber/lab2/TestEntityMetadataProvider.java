@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import ru.sfedu.groupappcontrolhiber.utils.HibernateUtil;
 
+import java.util.Optional;
+
 
 public class TestEntityMetadataProvider {
 

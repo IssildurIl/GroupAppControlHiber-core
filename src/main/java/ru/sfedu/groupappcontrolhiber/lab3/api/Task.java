@@ -1,10 +1,12 @@
 package ru.sfedu.groupappcontrolhiber.lab3.api;
+
 import lombok.Data;
 import ru.sfedu.groupappcontrolhiber.lab3.enums.TaskTypes;
 import ru.sfedu.groupappcontrolhiber.lab3.enums.TypeOfCompletion;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 @Data
@@ -18,10 +20,14 @@ public class Task implements Serializable {
   private String taskDescription;
   @Column(name = "Money")
   private double money;
+  @Embedded
   @Column(name = "scrumMaster")
-  private long scrumMaster;
+  private Employee scrumMaster;
   @Column(name = "Status")
   private TypeOfCompletion status;
+  @Embedded
+  @Column (name = "TEAM")
+  private List<Employee> team;
   @Column (name = "CreatedDate")
   @Temporal(TemporalType.DATE)
   private Date createdDate;
@@ -34,6 +40,6 @@ public class Task implements Serializable {
   @Column (name="TaskType")
   private TaskTypes taskType;
 
-  public Task () { };
+  public Task () { }
 
 }

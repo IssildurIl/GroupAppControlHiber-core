@@ -8,6 +8,7 @@ import ru.sfedu.groupappcontrolhiber.lab3.enums.TypeOfEmployee;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Embeddable
 @Data
 @Entity
 @Table(name = "EMPLOYEE")
