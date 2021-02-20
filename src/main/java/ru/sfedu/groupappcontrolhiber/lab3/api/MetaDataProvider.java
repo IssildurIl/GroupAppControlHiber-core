@@ -1,30 +1,11 @@
 package ru.sfedu.groupappcontrolhiber.lab3.api;
 
-import ru.sfedu.groupappcontrolhiber.lab3.models.*;
+import ru.sfedu.groupappcontrolhiber.Result;
+import ru.sfedu.groupappcontrolhiber.lab3.api.*;
 
 public interface MetaDataProvider {
+    <T> Result delete(T t);
+    <T> Result save(T t);
+    <T> Result<T> getById(Class <T> tClass,Long id);
 
-    void deleteEmployee(Employee employee);
-    void saveEmployee(Employee employee);
-    Employee getEmployeeById(Long id);
-
-    void deleteDeveloper(Developer developer);
-    void saveDeveloper(Developer developer);
-    Developer getDeveloperById(Long id);
-
-    void deleteTester(Tester tester);
-    void saveTester(Tester tester);
-    Tester getTesterById(Long id);
-
-    void deleteTask(Task task);
-    void saveTask(Task task);
-    Task getTaskById(Long id);
-
-    void deleteDevelopersTask(DevelopersTask developersTask);
-    void saveDevelopersTask(DevelopersTask developersTask);
-    DevelopersTask getDevelopersTaskById(Long id);
-
-    void deleteTestersTask(TestersTask testersTask);
-    void saveTestersTask(TestersTask testersTask);
-    TestersTask getTestersTaskById(Long id);
 }

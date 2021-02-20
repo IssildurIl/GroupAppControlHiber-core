@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "TESTENTITY")
+@Table(name = "TESTENTITY", schema = "S2")
 public class TestEntity implements Serializable {
     @Id
     @Column(name = "ID")

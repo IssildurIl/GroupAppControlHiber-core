@@ -1,16 +1,14 @@
 package ru.sfedu.groupappcontrolhiber.lab2;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
-
+import ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Employee;
+import ru.sfedu.groupappcontrolhiber.lab3.api.DataProvider;
 import java.util.Date;
-
+@Log4j2
 class TestEntityMetadataProviderTest {
 
-    private static Logger log= LogManager.getLogger(TestEntityMetadataProvider.class);
-
-
+    private static DataProvider instance = new DataProvider();
     @Test
     void SaveData(){
         Address homeaddress = new Address();
@@ -66,4 +64,11 @@ class TestEntityMetadataProviderTest {
         TestEntityMetadataProvider instance = new TestEntityMetadataProvider();
         log.info(instance.getById(1L));
     }
+
+    @Test
+    void saveDataEmp(){
+        Employee employee = new Employee();
+     instance.save(employee);
+    }
+
 }
