@@ -12,15 +12,16 @@ import java.io.Serializable;
 /**
  * Class Developer
  */
-
+@Entity
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Entity(name = "Developer")
 @Table
 public class Developer extends Employee implements Serializable {
   private TypeOfDevelopers status;
   private ProgrammingLanguage programmingLanguage;
 
   public Developer () { }
+
+
 
 }

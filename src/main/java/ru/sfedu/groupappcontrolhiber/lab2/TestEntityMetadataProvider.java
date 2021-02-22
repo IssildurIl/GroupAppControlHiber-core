@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import ru.sfedu.groupappcontrolhiber.enums.Outcomes;
 import ru.sfedu.groupappcontrolhiber.utils.HibernateUtil;
 
 import java.util.Optional;
@@ -36,6 +37,17 @@ public class TestEntityMetadataProvider {
 
     public TestEntity getById (Long id) {
         Session session=getSession();
-        return session.get(TestEntity.class,id);
+        try {
+            session.beginTransaction();
+            TestEntity testEntity = session.get(TestEntity.class, id);
+            session.getTransaction().commit();
+            session.close();
+            return testEntity;
+        }
+        catch (Exception e){
+            session.close();
+            log.error(Outcomes.Fail);
+            return null;
+        }
     }
 }

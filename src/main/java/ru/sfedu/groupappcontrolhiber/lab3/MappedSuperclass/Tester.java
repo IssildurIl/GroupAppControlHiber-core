@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class Tester extends Developer implements Serializable {
   @Column(name = "TypeOfTester")
   private TypeOfTester typeOfTester;
-  public Tester () { };
+  public Tester () { }
 
 
 }

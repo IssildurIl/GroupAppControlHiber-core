@@ -9,12 +9,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Entity(name = "EMPLOYEE")
-@Table
+//@Entity()
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+//@Table(name = "Employee")
+@MappedSuperclass
 public class Employee implements Serializable {
   @Id
   @Column(name = "ID")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
   @Column (name = "FirstName")
   private String firstName;
@@ -34,6 +36,5 @@ public class Employee implements Serializable {
   private TypeOfEmployee typeOfEmployee;
 
   public Employee () { }
-
 
 }

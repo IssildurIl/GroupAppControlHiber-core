@@ -22,29 +22,18 @@
         <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Employee"/>
         <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Developer"/>
         <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Tester"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Task"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.DevelopersTask"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.TestersTask"/>
 
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Employee"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Developer"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Tester"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Task"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.DevelopersTask"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.TestersTask"/>
 
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Employee"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Developer"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Tester"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Task"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.DevelopersTask"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.TestersTask"/>
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Employee"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Task"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.DevelopersTask"/>-->
 
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Employee"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Developer"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Tester"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Task"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.DevelopersTask"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.TestersTask"/>
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Employee"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Developer"/>-->
+
+
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Employee"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Task"/>-->
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.TestersTask"/>-->
     </session-factory>
 </hibernate-configuration>
