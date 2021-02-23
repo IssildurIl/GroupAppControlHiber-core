@@ -35,17 +35,6 @@ public class Employee implements Serializable {
   private TypeOfEmployee typeOfEmployee;
 
   public Employee () { }
-  public Employee setEmployee (Employee employee, String firstname, String lastname, String login, String password, String email,
-                   String token, String department, TypeOfEmployee typeOfEmployee) {
-    employee.setFirstName(firstname);
-    employee.setLastName(lastname);
-    employee.setLogin(login);
-    employee.setPassword(password);
-    employee.setEmail(email);
-    employee.setToken(token);
-    employee.setDepartment(department);
-    employee.setTypeOfEmployee(typeOfEmployee);
-    return employee;
-  }
+
 
 }

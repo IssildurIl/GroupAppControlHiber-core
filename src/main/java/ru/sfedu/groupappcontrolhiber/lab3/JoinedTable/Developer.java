@@ -23,18 +23,4 @@ public class Developer extends Employee implements Serializable {
   private ProgrammingLanguage programmingLanguage;
 
   public Developer () { }
-  public Developer(ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Developer developer, String firstname, String lastname, String login, String password, String email,
-                   String token, String department, TypeOfEmployee typeOfEmployee, TypeOfDevelopers status,
-                   ProgrammingLanguage programmingLanguage) {
-    developer.setFirstName(firstname);
-    developer.setLastName(lastname);
-    developer.setLogin(login);
-    developer.setPassword(password);
-    developer.setEmail(email);
-    developer.setToken(token);
-    developer.setDepartment(department);
-    developer.setTypeOfEmployee(typeOfEmployee);
-    developer.setStatus(status);
-    developer.setProgrammingLanguage(programmingLanguage);
-  }
 }

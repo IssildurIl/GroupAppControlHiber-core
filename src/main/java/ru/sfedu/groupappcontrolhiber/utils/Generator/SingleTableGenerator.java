@@ -1,53 +1,101 @@
 package ru.sfedu.groupappcontrolhiber.utils.Generator;
 
-import ru.sfedu.groupappcontrolhiber.enums.TaskTypes;
-import ru.sfedu.groupappcontrolhiber.enums.TypeOfCompletion;
-import ru.sfedu.groupappcontrolhiber.enums.TypeOfEmployee;
+import ru.sfedu.groupappcontrolhiber.Constants;
+import ru.sfedu.groupappcontrolhiber.enums.*;
 import ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Employee;
 import ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Task;
 import ru.sfedu.groupappcontrolhiber.lab3.SingleTable.TestersTask;
+import ru.sfedu.groupappcontrolhiber.lab3.api.SingleTableDataProvider;
 import ru.sfedu.groupappcontrolhiber.utils.Fill;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class SingleTableGenerator {
 
+    public static SingleTableDataProvider instance = new SingleTableDataProvider();
+
     public void singleTableGen(){
+            for (int i = 1; i <= 10; i++) {
+                Employee employee = new Employee();
+                setEmployee(employee, Fill.firstName[i - 1], Fill.lastName[i - 1], Fill.login[i - 1],
+                        Fill.password[i - 1], Fill.email[i - 1],
+                        Fill.token[i - 1], Fill.department[i - 1], TypeOfEmployee.Employee);
+                instance.save(employee);
+            }
         for (int i=1; i<=10; i++) {
-            Employee employee = new Employee();
-            employee.setFirstName(Fill.firstName[i-1]);
-            employee.setLastName(Fill.lastName[i-1]);
-            employee.setLogin(Fill.login[i-1]);
-            employee.setPassword(Fill.password[i-1]);
-            employee.setEmail(Fill.email[i-1]);
-            employee.setToken(Fill.token[i-1]);
-            employee.setDepartment(Fill.department[i-1]);
-            employee.setTypeOfEmployee(TypeOfEmployee.Employee);
+            Task task = new Task();
+            setTask(task, Fill.taskDescription[i-1],Fill.money[i-1], getScrum(),
+                    TypeOfCompletion.CUSTOM, getListEmployee(),
+                    new Date(), new Date(), new Date(),TaskTypes.BASE_TASK);
+            instance.save(task);
         }
-//        for (int i=1; i<=10; i++) {
-//            Task task = new Task();
-//            task.setTaskDescription(Fill.taskDescription[i-1]);
-//            task.setMoney(Fill.money[i-1]);
-//            task.setScrumMaster(getScrum());
-//            task.setStatus(TypeOfCompletion.CUSTOM);
-//            task.setTeam(getListEmployee());
-//            task.setCreatedDate(Fill.createdDate[i-1]);
-//            task.setDeadline(Fill.deadline[i-1]);
-//            task.setLastUpdate(Fill.lastUpdate[i-1]);
-//            task.setTaskType(TaskTypes.BASE_TASK);
-//
-//        }
-//        for (int i=1; i<=10; i++) {
-//            TestersTask testersTask = new TestersTask();
-//            testersTask.setTaskDescription(Fill.taskDescription[i-1]);
-//            testersTask.setMoney(Fill.money[i-1]);
-//            testersTask.setScrumMaster(getScrum());
-//            testersTask.setStatus(TypeOfCompletion.CUSTOM);
-//            testersTask.setTeam(getListEmployee());
-//            testersTask.setCreatedDate(Fill.createdDate[i-1]);
-//            testersTask.setDeadline(Fill.deadline[i-1]);
-//            testersTask.setLastUpdate(Fill.lastUpdate[i-1]);
-//            testersTask.setTaskType(TaskTypes.TESTERS_TASK);
-//            testersTask.setBugStatus(BugStatus.IN_WORK);
-
-
+        for (int i=1; i<=10; i++) {
+            TestersTask testersTask = new TestersTask();
+            setTestersTask(testersTask, Fill.taskDescription[i-1],Fill.money[i-1], getScrum(),
+                    TypeOfCompletion.CUSTOM, getListEmployee(),
+                    new Date(), new Date(), new Date(),TaskTypes.BASE_TASK,BugStatus.IN_WORK,
+                    Constants.BaseComment);
+            instance.save(testersTask);
         }
     }
+
+    public static List<Employee> getListEmployee(){
+        List<Employee> fullList = new ArrayList<>();
+        for (int i=1;i<=3; i++) {
+            fullList.add(getScrum());
+        }
+        return fullList;
+    }
+    public static Employee getScrum(){
+        long max=10;
+        return instance.getById(Employee.class,(long) Math.abs(Math.random()*max+1)).getData();
+    }
+
+    public static void setEmployee(Employee employee, String firstname,
+                                    String lastname, String login, String password,
+                                    String email,String token, String department,
+                                    TypeOfEmployee typeOfEmployee){
+        employee.setFirstName(firstname);
+        employee.setLastName(lastname);
+        employee.setLogin(login);
+        employee.setPassword(password);
+        employee.setEmail(email);
+        employee.setToken(token);
+        employee.setDepartment(department);
+        employee.setTypeOfEmployee(typeOfEmployee);
+    }
+
+    public static void setTask(Task task, String taskDescription, double money,
+                                Employee scrumMaster, TypeOfCompletion status, List<Employee> team,
+                                Date createdDate, Date deadline, Date lastUpdate, TaskTypes taskType){
+        task.setTaskDescription(taskDescription);
+        task.setMoney(money);
+        task.setScrumMaster(scrumMaster);
+        task.setStatus(status);
+        task.setTeam(team);
+        task.setCreatedDate(createdDate);
+        task.setDeadline(deadline);
+        task.setLastUpdate(lastUpdate);
+        task.setTaskType(taskType);
+    }
+
+    public static void setTestersTask(TestersTask task, String taskDescription, double money,
+                                      Employee scrumMaster, TypeOfCompletion status, List<Employee> team,
+                                      Date createdDate, Date deadline, Date lastUpdate,
+                                      TaskTypes taskType,BugStatus bugStatus, String description){
+        task.setTaskDescription(taskDescription);
+        task.setMoney(money);
+        task.setScrumMaster(scrumMaster);
+        task.setStatus(status);
+        task.setTeam(team);
+        task.setCreatedDate(createdDate);
+        task.setDeadline(deadline);
+        task.setLastUpdate(lastUpdate);
+        task.setTaskType(taskType);
+        task.setBugStatus(bugStatus);
+        task.setBugDescription(description);
+    }
+
+}
