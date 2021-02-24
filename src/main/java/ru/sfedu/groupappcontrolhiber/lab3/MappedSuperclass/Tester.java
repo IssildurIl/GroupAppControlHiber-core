@@ -2,6 +2,7 @@ package ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import ru.sfedu.groupappcontrolhiber.enums.TypeOfTester;
 
 import javax.persistence.Column;
@@ -14,8 +15,9 @@ import java.io.Serializable;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@ToString(callSuper = true)
 @Entity(name = "Tester")
-@Table
+@Table(schema = "S5")
 public class Tester extends Developer implements Serializable {
   @Column(name = "TypeOfTester")
   private TypeOfTester typeOfTester;

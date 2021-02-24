@@ -17,7 +17,9 @@ public class Fill {
     public static String[] deadline={"04-12-2022","05-12-2022","15-12-2022","15-12-2022","30-12-2022","31-12-2022","17-12-2022","17-12-2022","14-08-2022","09-01-2022"};
     public static String[] lastUpdate={"04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020"};
     public static String[] title ={"Game Project","Labs Project","Second Project","Partners Project","WebSite project","Design Project","Diploma Project","MakeOurTask Project","Application Project","SMTH Project"};
-
+    //
+    public static String[] prLanguages ={"C++","Kotlin", "PHP","Curry","Delphi",
+            "Erlang", "Mathematica","Mozart", "Nemerle", "Python","Rust"};
 }
 
 

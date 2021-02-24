@@ -3,6 +3,7 @@ package ru.sfedu.groupappcontrolhiber.lab3.TablePerClass;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import ru.sfedu.groupappcontrolhiber.enums.DeveloperTaskType;
 
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ import java.io.Serializable;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@ToString(callSuper = true)
 @Entity(name = "DeveloperTask1")
 @Table(schema = "S2")
 public class DevelopersTask extends Task implements Serializable {

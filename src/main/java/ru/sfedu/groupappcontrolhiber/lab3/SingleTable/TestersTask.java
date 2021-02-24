@@ -4,6 +4,7 @@ package ru.sfedu.groupappcontrolhiber.lab3.SingleTable;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import ru.sfedu.groupappcontrolhiber.enums.BugStatus;
 
 import javax.persistence.Entity;
@@ -16,6 +17,7 @@ import java.io.Serializable;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@ToString(callSuper = true)
 @Entity(name = "TestersTask3")
 @Table(schema = "S4")
 public class TestersTask extends Task implements Serializable {

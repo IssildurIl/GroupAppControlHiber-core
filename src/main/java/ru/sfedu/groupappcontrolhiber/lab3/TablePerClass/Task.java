@@ -25,8 +25,8 @@ public class Task implements Serializable {
   private Employee scrumMaster;
   @Column(name = "Status")
   private TypeOfCompletion status;
-  @ManyToMany
-  @JoinColumn(name = "ID")
+  @ManyToMany(fetch=FetchType.EAGER)
+  @JoinColumn
   private List<Employee> team;
   @Column (name = "CreatedDate")
   @Temporal(TemporalType.DATE)

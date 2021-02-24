@@ -9,4 +9,8 @@ public class Constants {
     public static final String SQL_ALL_USERS = "Select name from information_schema.Users";
     public static final String CONT_COLUMN_HINT_OUT = "Schemas result: { %d }";
     public static final String BaseComment = "BaseComment";
+    public static final String JoinTable = "Join Table schema";
+    public static final String MappedTable = "Mapped Superclass schema";
+    public static final String SingleTable = "Single Table schema";
+    public static final String TablePerClass = "TablePerClass Table schema";
 }

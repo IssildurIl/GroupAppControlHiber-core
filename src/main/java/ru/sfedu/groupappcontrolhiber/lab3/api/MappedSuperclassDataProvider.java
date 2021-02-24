@@ -50,6 +50,14 @@ public class MappedSuperclassDataProvider implements MetaDataProvider{
             return null;
         }
     }
-
+    @Override
+    public <T> Result<T> update(T t) {
+        Session session=getSession();
+        session.getTransaction().begin();
+        session.saveOrUpdate(t);
+        session.flush();
+        session.close();
+        return new Result<T>(Outcomes.Complete);
+    }
 
 }

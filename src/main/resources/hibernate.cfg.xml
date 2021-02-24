@@ -35,5 +35,9 @@
         <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Employee"/>
         <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Task"/>
         <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.TestersTask"/>
+
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab4.models.Item"/>
+<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab4.models.Employee"/>-->
+
     </session-factory>
 </hibernate-configuration>
