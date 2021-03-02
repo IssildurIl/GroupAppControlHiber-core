@@ -5,7 +5,6 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import ru.sfedu.groupappcontrolhiber.enums.ProgrammingLanguage;
 import ru.sfedu.groupappcontrolhiber.enums.TypeOfDevelopers;
-import ru.sfedu.groupappcontrolhiber.enums.TypeOfEmployee;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

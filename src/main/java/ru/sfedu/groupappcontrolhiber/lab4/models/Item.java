@@ -18,7 +18,6 @@ public class Item implements Serializable {
     @CollectionTable(name = "programmingLanguage")
     private Set<String> programmingLanguage = new HashSet<String>();
     //List
-
     @OrderColumn
     @ElementCollection(fetch = FetchType.EAGER)
     //@CollectionTable(name = "Employee4")
@@ -31,7 +30,7 @@ public class Item implements Serializable {
     //CustomMap
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "INVENTORY")
-    @MapKeyColumn(name = "worker")
+    @MapKey(name = "worker")
     private Map<String,Inventory> custommap = new HashMap<String, Inventory>();
     //Embedded
     @Embedded

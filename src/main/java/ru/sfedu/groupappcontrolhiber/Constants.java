@@ -13,4 +13,5 @@ public class Constants {
     public static final String MappedTable = "Mapped Superclass schema";
     public static final String SingleTable = "Single Table schema";
     public static final String TablePerClass = "TablePerClass Table schema";
+    public static final String ID_GEN = "generator";
 }
