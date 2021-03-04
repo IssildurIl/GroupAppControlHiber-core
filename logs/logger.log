@@ -1,30 +1,6 @@
-2021-03-02 23:15:49 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-02 23:15:49 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-02 23:17:33 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-02 23:17:33 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-02 23:20:40 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-02 23:20:40 INFO  Lab5HQLTest:71 - SomeInformation(id=0, testersTask=null, someInfos=INFO FOR TEST)
-2021-03-02 23:26:59 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-02 23:26:59 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 13:30:05 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 13:30:06 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:11:44 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=0, name=PC, mark=Intel))
-2021-03-04 14:11:44 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=6, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:14:35 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:14:35 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:16:01 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:17:16 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:18:25 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:18:25 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=6, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:19:48 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:23:01 INFO  Lab5HQLTest:57 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:23:02 INFO  Lab5HQLTest:76 - SomeInformation(id=0, testersTask=TestersTask(id=6, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:27:12 INFO  Lab5HQLTest:58 - Developer(id=5, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-04 14:27:12 INFO  Lab5HQLTest:77 - SomeInformation(id=0, testersTask=TestersTask(id=6, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:30:17 INFO  Lab5HQLTest:58 - Developer(id=1, inventory=Inventory(id=1, name=PC, mark=Intel))
-2021-03-04 14:30:17 INFO  Lab5HQLTest:77 - SomeInformation(id=0, testersTask=TestersTask(id=6, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:32:16 INFO  Lab5HQLTest:58 - Developer(id=1, inventory=Inventory(id=1, name=PC, mark=Intel))
-2021-03-04 14:32:17 INFO  Lab5HQLTest:77 - SomeInformation(id=0, testersTask=TestersTask(id=6, bugStatus=null, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-04 14:33:17 INFO  Lab5HQLTest:58 - Developer(id=0, inventory=Inventory(id=1, name=PC, mark=Intel))
-2021-03-04 14:33:55 INFO  Lab5HQLTest:58 - Developer(id=0, inventory=Inventory(id=1, name=PC, mark=Intel))
-2021-03-04 14:38:50 INFO  Lab5HQLTest:58 - Developer(id=0, inventory=Inventory(id=5, name=PC, mark=Intel))
+2021-03-04 21:31:16 ERROR Lab5Criteria:38 - javax.persistence.NoResultException: No entity found for query
+2021-03-04 21:31:17 INFO  Lab5HQLTest:87 - Criteria test Прошло времени, мс: 5559
+2021-03-04 21:31:59 ERROR Lab5HQL:78 - javax.persistence.NoResultException: No entity found for query
+2021-03-04 21:32:00 INFO  Lab5HQLTest:97 - HQL test Прошло времени, мс: 5548
+2021-03-04 21:32:42 ERROR Lab5NativeSQL:34 - java.lang.IllegalArgumentException: Type specified for TypedQuery [ru.sfedu.groupappcontrolhiber.lab5.models.Task] is incompatible with query return type [class ru.sfedu.groupappcontrolhiber.lab5.models.Project]
+2021-03-04 21:32:43 INFO  Lab5HQLTest:107 - SQL test Прошло времени, мс: 5456

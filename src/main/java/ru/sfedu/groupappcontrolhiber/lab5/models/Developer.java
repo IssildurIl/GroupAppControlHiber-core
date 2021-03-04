@@ -24,6 +24,7 @@ public class Developer implements Serializable {
   //@GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
+  private String name;
   //Разделяемый первичный
   @OneToOne(fetch = FetchType.EAGER, optional = false)
   @PrimaryKeyJoinColumn
