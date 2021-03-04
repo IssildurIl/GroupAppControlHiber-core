@@ -53,6 +53,7 @@ class Lab5HQLTest {
         instance.save(inventory);
 
         Developer developer = new Developer();
+        developer.setId(inventory.getId());
         developer.setInventory(inventory);
         log.info(developer.toString());
         instance.save(developer);

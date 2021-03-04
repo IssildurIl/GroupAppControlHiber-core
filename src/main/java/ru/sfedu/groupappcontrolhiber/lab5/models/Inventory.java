@@ -8,9 +8,10 @@ import java.io.Serializable;
 
 @Data
 @Entity
+@Table(schema = "S6")
 public class Inventory implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     //@GeneratedValue(generator = Constants.ID_GEN)
     private long id;
     private String name;

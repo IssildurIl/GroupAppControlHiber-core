@@ -21,6 +21,7 @@ import java.util.Set;
 @Table(schema = "S6")
 public class Developer implements Serializable {
   @Id
+  //@GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
   //Разделяемый первичный
