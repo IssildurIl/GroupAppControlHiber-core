@@ -1,6 +1,33 @@
-2021-03-04 21:31:16 ERROR Lab5Criteria:38 - javax.persistence.NoResultException: No entity found for query
-2021-03-04 21:31:17 INFO  Lab5HQLTest:87 - Criteria test Прошло времени, мс: 5559
-2021-03-04 21:31:59 ERROR Lab5HQL:78 - javax.persistence.NoResultException: No entity found for query
-2021-03-04 21:32:00 INFO  Lab5HQLTest:97 - HQL test Прошло времени, мс: 5548
-2021-03-04 21:32:42 ERROR Lab5NativeSQL:34 - java.lang.IllegalArgumentException: Type specified for TypedQuery [ru.sfedu.groupappcontrolhiber.lab5.models.Task] is incompatible with query return type [class ru.sfedu.groupappcontrolhiber.lab5.models.Project]
-2021-03-04 21:32:43 INFO  Lab5HQLTest:107 - SQL test Прошло времени, мс: 5456
+2021-03-04 21:15:32 INFO Lab5HQLTest:87 - Criteria test Прошло времени, мс: 5840
+2021-03-04 21:16:09 INFO Lab5HQLTest:97 - HQL test Прошло времени, мс: 9174
+2021-03-04 21:16:35 INFO Lab5HQLTest:107 - SQL test Прошло времени, мс: 6096
+
+2021-03-04 21:31:17 INFO Lab5HQLTest:87 - Criteria test Прошло времени, мс: 5559
+2021-03-04 21:32:00 INFO Lab5HQLTest:97 - HQL test Прошло времени, мс: 5548
+2021-03-04 21:32:43 INFO Lab5HQLTest:107 - SQL test Прошло времени, мс: 5456
+
+2021-03-05 21:04:54 INFO  Lab5HQLTest:87 - Criteria test Прошло времени, мс: 7088
+2021-03-05 21:05:13 INFO  Lab5HQLTest:97 - HQL test Прошло времени, мс: 7553
+2021-03-05 21:05:41 INFO  Lab5HQLTest:107 - SQL test Прошло времени, мс: 11680
+
+
+2021-03-06 10:17:33 INFO  Lab5HQLTest:86 - Inventory(id=1, name=PC, mark=Intel)
+2021-03-06 10:19:50 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
+2021-03-06 10:21:25 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
+2021-03-06 10:22:48 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
+2021-03-06 10:23:52 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
+2021-03-06 10:24:43 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
+2021-03-06 10:35:38 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
+2021-03-06 10:35:38 INFO  Lab5HQLTest:100 - Inventory(id=2, name=Lap, mark=Intel)
+2021-03-06 10:35:38 INFO  Lab5HQLTest:56 - Developer(id=7, name=Test Developer, inventory=Inventory(id=7, name=PC, mark=Intel))
+2021-03-06 10:35:38 INFO  Lab5HQLTest:78 - SomeInformation(id=0, testersTask=TestersTask(id=9, bugStatus=IN_WORK, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
+2021-03-06 10:36:03 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
+2021-03-06 10:36:32 INFO  Lab5HQLTest:56 - Developer(id=5, name=Test Developer, inventory=Inventory(id=5, name=PC, mark=Intel))
+2021-03-06 10:36:32 INFO  Lab5HQLTest:78 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=IN_WORK, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
+2021-03-06 10:36:59 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
+2021-03-06 10:36:59 INFO  Lab5HQLTest:100 - Inventory(id=2, name=Lap, mark=Intel)
+2021-03-06 10:36:59 INFO  Lab5HQLTest:56 - Developer(id=7, name=Test Developer, inventory=Inventory(id=7, name=PC, mark=Intel))
+2021-03-06 10:36:59 INFO  Lab5HQLTest:78 - SomeInformation(id=0, testersTask=TestersTask(id=9, bugStatus=IN_WORK, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
+2021-03-07 23:21:36 ERROR Main:14 - Not enough parameters
+2021-03-07 23:21:49 ERROR Main:14 - Not enough parameters
+2021-03-07 23:24:12 ERROR Main:15 - Not enough parameters

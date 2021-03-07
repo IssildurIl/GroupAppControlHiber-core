@@ -8,7 +8,6 @@ import java.io.Serializable;
 @Data
 public class Inventory implements Serializable {
     @Id
-    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column (name = "name",nullable = true)

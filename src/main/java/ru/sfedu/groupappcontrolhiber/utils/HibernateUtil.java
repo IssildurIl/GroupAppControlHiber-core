@@ -18,25 +18,6 @@ public class HibernateUtil {
      * Создание фабрики
      *
      */
-//    public static SessionFactory getSessionFactory() {
-//        if (sessionFactory == null) {
-//            // loads configuration and mappings
-//            Configuration configuration = new Configuration().configure();
-//            ServiceRegistry serviceRegistry
-//                    = new StandardServiceRegistryBuilder()
-//                    .applySettings(configuration.getProperties()).build();
-//
-//
-//            MetadataSources metadataSources =
-//                    new MetadataSources(serviceRegistry);
-//            metadataSources.addAnnotatedClass(Employee.class);// Аннотированная сущность
-//            metadataSources.addAnnotatedClass(Developer.class);
-//            metadataSources.addAnnotatedClass(Tester.class);
-//            sessionFactory = metadataSources.buildMetadata().buildSessionFactory();
-//        }
-//
-//        return sessionFactory;
-//    }
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {

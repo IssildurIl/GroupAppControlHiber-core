@@ -1,6 +1,7 @@
 package ru.sfedu.groupappcontrolhiber.lab5.api;
 
 import lombok.extern.log4j.Log4j2;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.groupappcontrolhiber.enums.BugStatus;
@@ -78,32 +79,57 @@ class Lab5HQLTest {
         hql.save(someInformation);
     }
     @Test
-    public void CriteriaTest() throws InterruptedException {
-        long start = System.currentTimeMillis();
-        criteria.getTaskById(4L);
-        Thread.sleep(1000);
-        long finish = System.currentTimeMillis();
-        long elapsed = finish - start;
-        log.info("Criteria test Прошло времени, мс: " + elapsed);
+    public void delete(){
+        Inventory inventory =new Inventory();
+        inventory.setName("PC");
+        inventory.setMark("Intel");
+        hql.save(inventory);
+        log.info(inventory);
+        hql.delete(inventory);
+        Assertions.assertNull(hql.getById(Inventory.class,1L).getData());
     }
 
     @Test
-    public void HQLTest() throws InterruptedException {
-        long start = System.currentTimeMillis();
-        hql.getTaskById(4L);
-        Thread.sleep(1000);
-        long finish = System.currentTimeMillis();
-        long elapsed = finish - start;
-        log.info("HQL test Прошло времени, мс: " + elapsed);
+    public void update(){
+        Inventory inventory =new Inventory();
+        inventory.setName("PC");
+        inventory.setMark("Intel");
+        hql.save(inventory);
+        inventory.setName("Lap");
+        hql.update(inventory);
+        log.info(inventory);
+        Assertions.assertEquals(hql.getById(Inventory.class,2L).getData().getName(),"Lap");
     }
 
-    @Test
-    public void SQLTest() throws InterruptedException {
-        long start = System.currentTimeMillis();
-        sql.getTaskById(4L);
-        Thread.sleep(1000);
-        long finish = System.currentTimeMillis();
-        long elapsed = finish - start;
-        log.info("SQL test Прошло времени, мс: " + elapsed);
-    }
+
+
+//    @Test
+//    public void CriteriaTest() throws InterruptedException {
+//        long start = System.currentTimeMillis();
+//        criteria.getTaskById(4L);
+//        Thread.sleep(1000);
+//        long finish = System.currentTimeMillis();
+//        long elapsed = finish - start;
+//        log.info("Criteria test Прошло времени, мс: " + elapsed);
+//    }
+//
+//    @Test
+//    public void HQLTest() throws InterruptedException {
+//        long start = System.currentTimeMillis();
+//        hql.getTaskById(4L);
+//        Thread.sleep(1000);
+//        long finish = System.currentTimeMillis();
+//        long elapsed = finish - start;
+//        log.info("HQL test Прошло времени, мс: " + elapsed);
+//    }
+//
+//    @Test
+//    public void SQLTest() throws InterruptedException {
+//        long start = System.currentTimeMillis();
+//        sql.getTaskById(4L);
+//        Thread.sleep(1000);
+//        long finish = System.currentTimeMillis();
+//        long elapsed = finish - start;
+//        log.info("SQL test Прошло времени, мс: " + elapsed);
+//    }
 }

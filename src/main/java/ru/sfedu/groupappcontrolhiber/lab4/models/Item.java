@@ -30,7 +30,7 @@ public class Item implements Serializable {
     //CustomMap
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "INVENTORY")
-    @MapKey(name = "worker")
+    @MapKeyColumn(name = "worker")
     private Map<String,Inventory> custommap = new HashMap<String, Inventory>();
     //Embedded
     @Embedded

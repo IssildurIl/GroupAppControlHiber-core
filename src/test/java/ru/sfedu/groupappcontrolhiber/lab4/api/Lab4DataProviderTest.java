@@ -6,7 +6,7 @@ import ru.sfedu.groupappcontrolhiber.lab4.models.Address;
 import ru.sfedu.groupappcontrolhiber.lab4.models.Inventory;
 import ru.sfedu.groupappcontrolhiber.lab4.models.Item;
 import ru.sfedu.groupappcontrolhiber.utils.Fill;
-import ru.sfedu.groupappcontrolhiber.utils.Generator.Lab4Generator;
+
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -14,11 +14,9 @@ import java.util.HashSet;
 
 class Lab4DataProviderTest {
     public static final Lab4DataProvider instance = new Lab4DataProvider();
-    public static final Lab4Generator inst = new Lab4Generator();
 
     @BeforeAll
     static void setEnv() {
-        //inst.lab4Gen();
     }
 
 
@@ -31,7 +29,6 @@ class Lab4DataProviderTest {
         Item item = new Item();
         HashSet<String> progLangHS = new HashSet<String>(Arrays.asList(Fill.prLanguages));
         item.setProgrammingLanguage(progLangHS);
-        //item.setTeam(inst.getListEmployee());
         item.setTeam(Arrays.asList(Fill.department));
         HashMap<String, String> nameAgeHM = new HashMap<String, String>();
         nameAgeHM.put("Kirill", "07.12.1987");
