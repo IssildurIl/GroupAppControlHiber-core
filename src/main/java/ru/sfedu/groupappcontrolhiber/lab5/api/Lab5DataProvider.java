@@ -7,5 +7,5 @@ import ru.sfedu.groupappcontrolhiber.lab5.models.Project;
 import ru.sfedu.groupappcontrolhiber.lab5.models.Task;
 
 public interface Lab5DataProvider {
-    Result<Address> getProjectById(long id);
+    Result<Project> getProjectById(long id);
 }

@@ -3,6 +3,7 @@ package ru.sfedu.groupappcontrolhiber.lab5.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
@@ -29,6 +30,7 @@ public class Employee implements Serializable {
           optional = false,
           cascade = CascadeType.ALL
   )
+  @ToString.Exclude
   @JoinColumn(unique = true)
   Address address;
 

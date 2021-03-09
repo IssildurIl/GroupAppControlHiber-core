@@ -24,12 +24,12 @@ public class Lab5NativeSQL implements Lab5DataProvider{
     }
 
     @Override
-    public Result<Address> getProjectById(long id) {
+    public Result<Project> getProjectById(long id) {
         Session session = getSession();
         try {
-            Query query = session.createQuery("select u from Address u where u.id=:id", Address.class)
+            Query query = session.createQuery("select u from Project u where u.id=:id", Project.class)
                     .setParameter("id",id);
-            Address project = (Address) query.getSingleResult();
+            Project project = (Project) query.getSingleResult();
             log.debug(query);
             return new Result<>(Outcomes.Complete,project);
         } catch (Exception exception) {

@@ -24,17 +24,17 @@ public class Lab5Criteria implements Lab5DataProvider{
     }
 
     @Override
-    public Result<Address> getProjectById(long id) {
+    public Result<Project> getProjectById(long id) {
         Session session = getSession();
         try {
             CriteriaBuilder cb = session.getCriteriaBuilder();
-            CriteriaQuery<Address> cq = cb.createQuery(Address.class);
-            Root<Address> root = cq.from(Address.class);
+            CriteriaQuery<Project> cq = cb.createQuery(Project.class);
+            Root<Project> root = cq.from(Project.class);
             cq.select(root).where(cb.equal(root.get("id"), id));
-            Address task = session.createQuery(cq).getSingleResult();
+            Project project = session.createQuery(cq).getSingleResult();
             session.close();
-            log.info(task.toString());
-            return new Result<Address>(Outcomes.Complete,task);
+            log.info(project.toString());
+            return new Result<Project>(Outcomes.Complete,project);
         } catch (Exception exception) {
             session.close();
             log.error(exception);

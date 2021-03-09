@@ -39,3 +39,9 @@
 2021-03-09 04:57:47 DEBUG Lab5NativeSQL:33 - org.hibernate.query.internal.QueryImpl@690df641
 2021-03-09 04:57:47 INFO  Lab5HQLTest:132 - Address(id=1, street=Eremenko, city=Rostov)
 2021-03-09 04:57:48 INFO  Lab5HQLTest:136 - SQL test Прошло времени, мс: 1320
+2021-03-09 05:34:50 ERROR Lab5Criteria:40 - javax.persistence.NoResultException: No entity found for query
+2021-03-09 05:34:50 INFO  Lab5HQLTest:112 - null
+2021-03-09 05:34:51 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1419
+2021-03-09 05:37:18 INFO  Lab5Criteria:36 - Project(id=4, title=Game Project)
+2021-03-09 05:37:18 INFO  Lab5HQLTest:112 - Project(id=4, title=Game Project)
+2021-03-09 05:37:19 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1707

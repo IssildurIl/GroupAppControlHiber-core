@@ -3,6 +3,7 @@ package ru.sfedu.groupappcontrolhiber.lab5.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
@@ -24,6 +25,7 @@ public class Developer implements Serializable {
   //Разделяемый первичный
   @OneToOne(fetch = FetchType.LAZY, optional = false)
   @PrimaryKeyJoinColumn
+  @ToString.Exclude
   Inventory inventory;
 
   public Developer () { }

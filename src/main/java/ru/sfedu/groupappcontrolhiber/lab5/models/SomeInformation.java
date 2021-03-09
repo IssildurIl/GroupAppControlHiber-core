@@ -2,6 +2,7 @@ package ru.sfedu.groupappcontrolhiber.lab5.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -27,6 +28,7 @@ public class SomeInformation implements Serializable {
     //@OneToOne(mappedBy = "infos")
     @OneToOne(optional = false,fetch = FetchType.LAZY)
     @PrimaryKeyJoinColumn
+    @ToString.Exclude
     TestersTask testersTask;
 
 

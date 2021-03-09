@@ -31,7 +31,7 @@ public class TestersTask implements Serializable {
   @OneToOne
           (mappedBy = "testersTask",
           cascade = CascadeType.PERSIST)
-  //@JoinColumn(name="someinformation_id")
+  @ToString.Exclude
   SomeInformation infos;
 
   public TestersTask() { };

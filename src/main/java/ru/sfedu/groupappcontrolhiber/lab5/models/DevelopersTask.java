@@ -35,6 +35,7 @@ public class DevelopersTask extends Task implements Serializable {
           joinColumns = @JoinColumn(name = "developerstask_id"),
           inverseJoinColumns = @JoinColumn(name = "developer")
   )
+  @ToString.Exclude
   private List<Developer> developer = new ArrayList<>();
 
   public DevelopersTask() { }

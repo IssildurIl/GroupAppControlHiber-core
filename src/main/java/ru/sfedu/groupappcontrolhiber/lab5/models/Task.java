@@ -3,16 +3,18 @@ package ru.sfedu.groupappcontrolhiber.lab5.models;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import ru.sfedu.groupappcontrolhiber.lab5.models.Employee;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
-import javax.transaction.Transactional;
 import java.io.Serializable;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @EqualsAndHashCode
 @Entity
+@RequiredArgsConstructor
 @Table(schema = "S6")
 public class Task implements Serializable {
   @Id
@@ -22,9 +24,7 @@ public class Task implements Serializable {
   String name;
   //двунаправленная
   @OneToMany(mappedBy = "task",fetch = FetchType.LAZY)
+  @ToString.Exclude
   Set<Employee> team = new HashSet<>();
 
-
-
-  public Task () { }
 }

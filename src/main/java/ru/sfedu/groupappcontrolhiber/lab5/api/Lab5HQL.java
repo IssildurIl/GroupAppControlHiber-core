@@ -68,11 +68,11 @@ public class Lab5HQL implements Lab5DataProvider{
     }
 
 
-    public Result<Address> getProjectById(long id) {
+    public Result<Project> getProjectById(long id) {
         Session session = getSession();
         try {
-            Query query = session.createQuery("from Address where id=:id").setParameter("id", id);
-            Address project = (Address) query.getSingleResult();
+            Query query = session.createQuery("from Project where id=:id").setParameter("id", id);
+            Project project = (Project) query.getSingleResult();
             log.debug(project.toString());
             return new Result<>(Outcomes.Complete,project);
         } catch (Exception exception) {

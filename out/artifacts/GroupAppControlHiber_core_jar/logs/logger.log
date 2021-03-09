@@ -15,3 +15,7 @@
 2021-03-09 03:58:04 ERROR Lab5Criteria:38 - javax.persistence.NonUniqueResultException: query did not return a unique result: 10
 2021-03-09 03:58:05 ERROR Main:160 - java.lang.NullPointerException: Cannot invoke "ru.sfedu.groupappcontrolhiber.lab5.models.Project.toString()" because "project" is null
 2021-03-09 05:02:14 INFO  Lab5Criteria:36 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 05:20:30 INFO  Lab5Criteria:36 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 05:20:46 DEBUG Lab5NativeSQL:33 - org.hibernate.query.internal.QueryImpl@3db1ce78
+2021-03-09 05:21:00 DEBUG Lab5HQL:76 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 05:38:48 DEBUG Lab5HQL:76 - Project(id=4, title=Game Project)
