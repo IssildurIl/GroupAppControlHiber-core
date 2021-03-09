@@ -20,11 +20,13 @@ public class HibernateUtil {
      */
 
     public static SessionFactory getSessionFactory() {
+        File nf;
         if (sessionFactory == null) {
-            File file = new File(Constants.RESOURCE_PATH);
-            sessionFactory = new Configuration().configure(file).buildSessionFactory();
+            nf = new File(Constants.RESOURCE_PATH);
+        } else{
+            nf= new File(Constants.CONFIG_PATH);
         }
-
+        sessionFactory = new Configuration().configure(nf).buildSessionFactory();
         return sessionFactory;
     }
 

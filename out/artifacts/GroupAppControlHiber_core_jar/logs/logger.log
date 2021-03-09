@@ -19,3 +19,12 @@
 2021-03-09 05:20:46 DEBUG Lab5NativeSQL:33 - org.hibernate.query.internal.QueryImpl@3db1ce78
 2021-03-09 05:21:00 DEBUG Lab5HQL:76 - Address(id=1, street=Eremenko, city=Rostov)
 2021-03-09 05:38:48 DEBUG Lab5HQL:76 - Project(id=4, title=Game Project)
+2021-03-09 09:38:30 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
+2021-03-09 09:53:20 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
+2021-03-09 09:55:07 ERROR Main:140 - java.lang.NumberFormatException: For input string: "null"
+2021-03-09 09:56:13 INFO  Lab5Criteria:36 - Project(id=4, title=Game Project)
+2021-03-09 10:26:23 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
+2021-03-09 10:28:32 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
+2021-03-09 10:32:52 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
+2021-03-09 10:33:37 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
+2021-03-09 10:47:10 INFO  HibernateMetadataProvider:24 - Schemas result: { 7 }
