@@ -12,7 +12,6 @@ import java.io.Serializable;
 @Entity
 @EqualsAndHashCode
 @Table(schema = "S6")
-@Transactional
 public class Employee implements Serializable {
   @Id
   @Column(name = "employee_id")
@@ -22,7 +21,7 @@ public class Employee implements Serializable {
   //двунаправленная
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "task_id",nullable = false)
-  Task task = new Task();
+  Task task;
 
   //Внешний ключ
   @OneToOne(
@@ -31,7 +30,7 @@ public class Employee implements Serializable {
           cascade = CascadeType.ALL
   )
   @JoinColumn(unique = true)
-  Address address = new Address();
+  Address address;
 
   private String firstName;
 

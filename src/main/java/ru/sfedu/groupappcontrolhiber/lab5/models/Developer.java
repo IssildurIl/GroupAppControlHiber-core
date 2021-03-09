@@ -16,7 +16,6 @@ import java.util.Set;
 @EqualsAndHashCode
 @Entity
 @Table(schema = "S6",name = "DeveloperLab5")
-@Transactional
 public class Developer implements Serializable {
   @Id
   private long id;

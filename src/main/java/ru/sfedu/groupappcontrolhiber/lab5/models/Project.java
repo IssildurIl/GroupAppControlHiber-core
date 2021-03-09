@@ -12,7 +12,6 @@ import java.io.Serializable;
 @Entity
 @EqualsAndHashCode
 @Table(schema = "S6")
-@Transactional
 public class Project implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,7 +22,7 @@ public class Project implements Serializable {
   //Однонаправленная ассоциация
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "task_id",nullable = false)
-  private Task task = new Task();
+  private Task task;
 
 
   public Project() { }

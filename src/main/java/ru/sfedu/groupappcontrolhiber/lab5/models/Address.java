@@ -11,7 +11,6 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @Entity
 @Table(schema = "S6")
-@Transactional
 public class Address implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -14,7 +14,6 @@ import java.util.*;
 @EqualsAndHashCode
 @Entity
 @Table(schema = "S6")
-@Transactional
 public class Task implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)

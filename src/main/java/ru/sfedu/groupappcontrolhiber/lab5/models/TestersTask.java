@@ -20,7 +20,6 @@ import java.io.Serializable;
 @Entity
 @EqualsAndHashCode
 @Table(schema = "S6")
-@Transactional
 public class TestersTask implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)

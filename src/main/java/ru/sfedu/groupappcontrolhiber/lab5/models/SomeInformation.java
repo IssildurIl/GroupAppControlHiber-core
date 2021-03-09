@@ -12,7 +12,6 @@ import java.io.Serializable;
 @Entity
 @EqualsAndHashCode
 @Table(schema = "S6")
-@Transactional
 public class SomeInformation implements Serializable {
     @Id
     @GeneratedValue(generator = "addressGen")
@@ -28,7 +27,7 @@ public class SomeInformation implements Serializable {
     //@OneToOne(mappedBy = "infos")
     @OneToOne(optional = false,fetch = FetchType.LAZY)
     @PrimaryKeyJoinColumn
-    TestersTask testersTask = new TestersTask();
+    TestersTask testersTask;
 
 
     private String someInfos;

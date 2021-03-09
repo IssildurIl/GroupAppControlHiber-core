@@ -22,7 +22,6 @@ import java.util.List;
 @ToString(callSuper = true)
 @Entity
 @Table(schema = "S6")
-@Transactional
 public class DevelopersTask extends Task implements Serializable {
 
   private String developerComments;

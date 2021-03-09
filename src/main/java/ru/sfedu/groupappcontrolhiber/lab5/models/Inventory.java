@@ -12,7 +12,6 @@ import java.io.Serializable;
 @Entity
 @EqualsAndHashCode
 @Table(schema = "S6")
-@Transactional
 public class Inventory implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
