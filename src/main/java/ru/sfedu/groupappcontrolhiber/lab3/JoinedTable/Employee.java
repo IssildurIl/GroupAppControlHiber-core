@@ -9,9 +9,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Entity(name = "Employee2")
+@Entity(name = "EmployeeJTLab3")
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(schema = "S3")
+@Table(schema = "S3",name = "EmployeeJTLab3")
 public class Employee implements Serializable {
   @Id
   @Column(name = "ID")

@@ -9,7 +9,7 @@
         <property name="connection.url">jdbc:h2:D:/projects/GroupAppControlHiber-core/src/main/resources/jdbc/grapdb</property>
         <property name="connection.username">user</property>
         <property name="connection.password">user</property>
-        <property name="connection.pool_size">10</property>
+        <property name="connection.pool_size">100</property>
         <!-- SQL диалект, определяется платформой СУБД-->
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
         <!-- Включить автоматическое управление контекстом сессии -->
@@ -17,38 +17,36 @@
         <property name="show_sql">true</property>
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab2.TestEntity"/>-->
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab2.TestEntity"/>
 
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Employee"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Developer"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Tester"/>-->
-
-
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Employee"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Task"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.DevelopersTask"/>-->
-
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Employee"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Developer"/>-->
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Employee"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Developer"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.MappedSuperclass.Tester"/>
 
 
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Employee"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Task"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.TestersTask"/>-->
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Employee"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.Task"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.TablePerClass.DevelopersTask"/>
 
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab4.models.Inventory"/>-->
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Employee"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.JoinedTable.Developer"/>
+
+
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Employee"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.Task"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab3.SingleTable.TestersTask"/>
+
         <mapping class="ru.sfedu.groupappcontrolhiber.lab4.models.Item"/>
-        <mapping class="ru.sfedu.groupappcontrolhiber.lab4.models.Employee"/>
-
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Address"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Developer"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Employee"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Project"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Task"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Inventory"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.SomeInformation"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.TestersTask"/>-->
-<!--        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.DevelopersTask"/>-->
+      
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Address"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Developer"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Employee"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Project"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Task"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.Inventory"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.SomeInformation"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.TestersTask"/>
+        <mapping class="ru.sfedu.groupappcontrolhiber.lab5.models.DevelopersTask"/>
 
     </session-factory>
 </hibernate-configuration>

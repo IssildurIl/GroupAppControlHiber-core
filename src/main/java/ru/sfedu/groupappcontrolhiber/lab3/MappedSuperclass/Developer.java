@@ -13,11 +13,11 @@ import java.io.Serializable;
 /**
  * Class Developer
  */
-@Entity
+@Entity(name = "DeveloperMSLab3")
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Table(schema = "S5")
+@Table(schema = "S5",name = "DeveloperMSLab3")
 public class Developer extends Employee implements Serializable {
   private TypeOfDevelopers status;
   private ProgrammingLanguage programmingLanguage;

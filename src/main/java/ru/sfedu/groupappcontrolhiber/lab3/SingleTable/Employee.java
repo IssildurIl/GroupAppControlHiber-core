@@ -9,8 +9,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-@Entity(name = "Employee3")
-@Table(schema = "S4")
+@Entity(name = "EmployeeSTLab3")
+@Table(schema = "S4",name = "EmployeeSTLab3")
 public class Employee implements Serializable {
   @Id
   @Column(name = "ID")

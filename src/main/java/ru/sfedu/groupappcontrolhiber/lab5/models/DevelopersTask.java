@@ -8,6 +8,7 @@ import ru.sfedu.groupappcontrolhiber.enums.DeveloperTaskType;
 import ru.sfedu.groupappcontrolhiber.lab5.models.Task;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.List;
 @ToString(callSuper = true)
 @Entity
 @Table(schema = "S6")
+@Transactional
 public class DevelopersTask extends Task implements Serializable {
 
   private String developerComments;

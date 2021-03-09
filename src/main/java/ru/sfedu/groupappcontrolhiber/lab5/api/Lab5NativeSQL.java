@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import ru.sfedu.groupappcontrolhiber.Result;
 import ru.sfedu.groupappcontrolhiber.enums.Outcomes;
+import ru.sfedu.groupappcontrolhiber.lab5.models.Address;
+import ru.sfedu.groupappcontrolhiber.lab5.models.Employee;
 import ru.sfedu.groupappcontrolhiber.lab5.models.Project;
 import ru.sfedu.groupappcontrolhiber.lab5.models.Task;
 import ru.sfedu.groupappcontrolhiber.utils.HibernateUtil;
@@ -22,13 +24,14 @@ public class Lab5NativeSQL implements Lab5DataProvider{
     }
 
     @Override
-    public Result<Project> getTaskById(long id) {
+    public Result<Address> getProjectById(long id) {
         Session session = getSession();
         try {
-            Query query = session.createQuery("select u from Project u where u.id=:id", Task.class);
-            Project task = (Project) query.getSingleResult();
+            Query query = session.createQuery("select u from Address u where u.id=:id", Address.class)
+                    .setParameter("id",id);
+            Address project = (Address) query.getSingleResult();
             log.debug(query);
-            return new Result<>(Outcomes.Complete,task);
+            return new Result<>(Outcomes.Complete,project);
         } catch (Exception exception) {
             session.close();
             log.error(exception);

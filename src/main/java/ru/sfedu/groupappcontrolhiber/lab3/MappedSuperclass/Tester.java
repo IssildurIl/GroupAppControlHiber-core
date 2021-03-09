@@ -16,8 +16,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @ToString(callSuper = true)
-@Entity(name = "Tester")
-@Table(schema = "S5")
+@Entity(name = "TesterMSLab3")
+@Table(schema = "S5",name = "TesterMSLab3")
 public class Tester extends Developer implements Serializable {
   @Column(name = "TypeOfTester")
   private TypeOfTester typeOfTester;

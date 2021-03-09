@@ -17,7 +17,8 @@ class MappedSuperclassDataProviderTest {
     public static final MappedSuperclassGenerator inst = new MappedSuperclassGenerator();
     @BeforeAll
     static void setEnv() {
-         inst.mappedSuperclassGen();
+        MappedSuperclassGenerator map = new MappedSuperclassGenerator();
+        map.mappedSuperclassGen();
     }
 
     @Test

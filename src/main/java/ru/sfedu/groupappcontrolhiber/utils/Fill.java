@@ -18,6 +18,9 @@ public class Fill {
     public static String[] lastUpdate={"04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020","04-12-2020"};
     public static String[] title ={"Game Project","Labs Project","Second Project","Partners Project","WebSite project","Design Project","Diploma Project","MakeOurTask Project","Application Project","SMTH Project"};
     //
+    public static String[] addressCity={"Rostov","Rostov-on-Don","Moskov","Cheluabinsk","Novgorod","Belgorod","st.Pererburg","Lipezk","Ivtel","Murmask"};
+    public static String[] addressStreet={"Eremenko","Milchakova","Jmailova","Tolmacheva","Zorge","Communisticheskaya","Serafimovicha","Orbitalnaya","Boryana","Dobrovolskogo"};
+    public static String[] inventoryMark={"Intel","AMD","Zeon","Pc","Lap","ECM","Idk","Liker","Diploma","Vedro"};
     public static String[] prLanguages ={"C++","Kotlin", "PHP","Curry","Delphi",
             "Erlang", "Mathematica","Mozart", "Nemerle", "Python","Rust"};
 }

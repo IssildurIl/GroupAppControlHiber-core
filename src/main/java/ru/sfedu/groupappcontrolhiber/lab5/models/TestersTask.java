@@ -8,6 +8,7 @@ import lombok.ToString;
 import ru.sfedu.groupappcontrolhiber.enums.BugStatus;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.io.Serializable;
 
 
@@ -17,7 +18,9 @@ import java.io.Serializable;
 
 @Data
 @Entity
+@EqualsAndHashCode
 @Table(schema = "S6")
+@Transactional
 public class TestersTask implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)

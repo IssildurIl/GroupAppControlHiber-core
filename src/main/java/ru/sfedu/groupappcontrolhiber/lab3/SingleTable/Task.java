@@ -10,9 +10,9 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Entity(name = "Task3")
+@Entity(name = "TaskSTLab3")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@Table(schema = "S4")
+@Table(schema = "S4",name = "TaskSTLab3")
 public class Task implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)

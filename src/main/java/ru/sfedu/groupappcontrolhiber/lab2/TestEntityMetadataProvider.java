@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import ru.sfedu.groupappcontrolhiber.Result;
 import ru.sfedu.groupappcontrolhiber.enums.Outcomes;
 import ru.sfedu.groupappcontrolhiber.utils.HibernateUtil;
 
@@ -19,35 +20,49 @@ public class TestEntityMetadataProvider {
         return sessionFactory.openSession();
     }
 
-    public void saveTestEntity (TestEntity testEntity) {
-        Session session=getSession();
-        session.getTransaction().begin();
-        session.save(testEntity);
-        session.flush();
-        session.close();
-    }
 
-    public void deleteTestEntity (TestEntity testEntity) {
+    public <T> Result<T> delete(T t) {
         Session session=getSession();
         session.beginTransaction();
-        session.delete(testEntity);
+        session.delete(t);
         session.flush();
         session.close();
+        return new Result<T>(Outcomes.Complete);
     }
 
-    public TestEntity getById (Long id) {
+
+    public <T> Result<T> save(T t) {
+        Session session=getSession();
+        session.getTransaction().begin();
+        session.save(t);
+        session.flush();
+        session.close();
+        return new Result<T>(Outcomes.Complete);
+    }
+
+
+    public <T> Result<T> getById(Class<T> tClass, Long id) {
         Session session=getSession();
         try {
             session.beginTransaction();
-            TestEntity testEntity = session.get(TestEntity.class, id);
+            T t = session.get(tClass, id);
             session.getTransaction().commit();
             session.close();
-            return testEntity;
+            return new Result<T>(Outcomes.Complete,t);
         }
         catch (Exception e){
             session.close();
             log.error(Outcomes.Fail);
             return null;
         }
+    }
+
+    public <T> Result<T> update(T t) {
+        Session session=getSession();
+        session.getTransaction().begin();
+        session.saveOrUpdate(t);
+        session.flush();
+        session.close();
+        return new Result<T>(Outcomes.Complete);
     }
 }

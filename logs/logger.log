@@ -1,33 +1,41 @@
-2021-03-04 21:15:32 INFO Lab5HQLTest:87 - Criteria test Прошло времени, мс: 5840
-2021-03-04 21:16:09 INFO Lab5HQLTest:97 - HQL test Прошло времени, мс: 9174
-2021-03-04 21:16:35 INFO Lab5HQLTest:107 - SQL test Прошло времени, мс: 6096
-
-2021-03-04 21:31:17 INFO Lab5HQLTest:87 - Criteria test Прошло времени, мс: 5559
-2021-03-04 21:32:00 INFO Lab5HQLTest:97 - HQL test Прошло времени, мс: 5548
-2021-03-04 21:32:43 INFO Lab5HQLTest:107 - SQL test Прошло времени, мс: 5456
-
-2021-03-05 21:04:54 INFO  Lab5HQLTest:87 - Criteria test Прошло времени, мс: 7088
-2021-03-05 21:05:13 INFO  Lab5HQLTest:97 - HQL test Прошло времени, мс: 7553
-2021-03-05 21:05:41 INFO  Lab5HQLTest:107 - SQL test Прошло времени, мс: 11680
-
-
-2021-03-06 10:17:33 INFO  Lab5HQLTest:86 - Inventory(id=1, name=PC, mark=Intel)
-2021-03-06 10:19:50 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
-2021-03-06 10:21:25 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
-2021-03-06 10:22:48 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
-2021-03-06 10:23:52 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
-2021-03-06 10:24:43 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
-2021-03-06 10:35:38 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
-2021-03-06 10:35:38 INFO  Lab5HQLTest:100 - Inventory(id=2, name=Lap, mark=Intel)
-2021-03-06 10:35:38 INFO  Lab5HQLTest:56 - Developer(id=7, name=Test Developer, inventory=Inventory(id=7, name=PC, mark=Intel))
-2021-03-06 10:35:38 INFO  Lab5HQLTest:78 - SomeInformation(id=0, testersTask=TestersTask(id=9, bugStatus=IN_WORK, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-06 10:36:03 INFO  Lab5HQLTest:100 - Inventory(id=1, name=Lap, mark=Intel)
-2021-03-06 10:36:32 INFO  Lab5HQLTest:56 - Developer(id=5, name=Test Developer, inventory=Inventory(id=5, name=PC, mark=Intel))
-2021-03-06 10:36:32 INFO  Lab5HQLTest:78 - SomeInformation(id=0, testersTask=TestersTask(id=7, bugStatus=IN_WORK, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-06 10:36:59 INFO  Lab5HQLTest:87 - Inventory(id=1, name=PC, mark=Intel)
-2021-03-06 10:36:59 INFO  Lab5HQLTest:100 - Inventory(id=2, name=Lap, mark=Intel)
-2021-03-06 10:36:59 INFO  Lab5HQLTest:56 - Developer(id=7, name=Test Developer, inventory=Inventory(id=7, name=PC, mark=Intel))
-2021-03-06 10:36:59 INFO  Lab5HQLTest:78 - SomeInformation(id=0, testersTask=TestersTask(id=9, bugStatus=IN_WORK, bugDescription=description, infos=null), someInfos=INFO FOR TEST)
-2021-03-07 23:21:36 ERROR Main:14 - Not enough parameters
-2021-03-07 23:21:49 ERROR Main:14 - Not enough parameters
-2021-03-07 23:24:12 ERROR Main:15 - Not enough parameters
+2021-03-09 04:18:09 ERROR Lab5Criteria:38 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:18:09 INFO  Lab5HQLTest:111 - null
+2021-03-09 04:18:10 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1395
+2021-03-09 04:19:20 ERROR Lab5Criteria:38 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:19:20 INFO  Lab5HQLTest:111 - null
+2021-03-09 04:19:21 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1392
+2021-03-09 04:20:28 ERROR Lab5Criteria:38 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:20:28 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:20:29 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1355
+2021-03-09 04:23:46 ERROR Lab5Criteria:38 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:23:46 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:23:47 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1420
+2021-03-09 04:25:10 ERROR Lab5Criteria:38 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:25:10 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:25:11 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1504
+2021-03-09 04:26:02 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1114
+2021-03-09 04:28:27 ERROR Lab5NativeSQL:35 - javax.persistence.PersistenceException: org.hibernate.HibernateException: collection was evicted
+2021-03-09 04:28:27 INFO  Lab5HQLTest:131 - null
+2021-03-09 04:28:28 INFO  Lab5HQLTest:135 - SQL test Прошло времени, мс: 1287
+2021-03-09 04:40:57 ERROR Lab5HQL:54 - Fail
+2021-03-09 04:41:36 ERROR Lab5Criteria:38 - javax.persistence.PersistenceException: org.hibernate.HibernateException: collection was evicted
+2021-03-09 04:41:36 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:41:37 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1386
+2021-03-09 04:45:00 ERROR Lab5Criteria:38 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:45:00 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:45:01 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1434
+2021-03-09 04:52:22 ERROR Lab5Criteria:39 - org.hibernate.LazyInitializationException: could not initialize proxy [ru.sfedu.groupappcontrolhiber.lab5.models.Task#2] - no Session
+2021-03-09 04:52:22 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:52:23 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1368
+2021-03-09 04:55:47 ERROR Lab5Criteria:40 - javax.persistence.NoResultException: No entity found for query
+2021-03-09 04:55:47 INFO  Lab5HQLTest:112 - null
+2021-03-09 04:55:48 INFO  Lab5HQLTest:116 - Criteria test Прошло времени, мс: 1334
+2021-03-09 04:56:31 DEBUG Lab5HQL:76 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 04:56:31 INFO  Lab5HQLTest:122 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 04:56:32 INFO  Lab5HQLTest:126 - HQL test Прошло времени, мс: 1279
+2021-03-09 04:57:21 DEBUG Lab5HQL:76 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 04:57:21 INFO  Lab5HQLTest:122 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 04:57:22 INFO  Lab5HQLTest:126 - HQL test Прошло времени, мс: 1276
+2021-03-09 04:57:47 DEBUG Lab5NativeSQL:33 - org.hibernate.query.internal.QueryImpl@690df641
+2021-03-09 04:57:47 INFO  Lab5HQLTest:132 - Address(id=1, street=Eremenko, city=Rostov)
+2021-03-09 04:57:48 INFO  Lab5HQLTest:136 - SQL test Прошло времени, мс: 1320

@@ -5,6 +5,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import ru.sfedu.groupappcontrolhiber.Result;
 import ru.sfedu.groupappcontrolhiber.enums.Outcomes;
+import ru.sfedu.groupappcontrolhiber.lab5.models.Address;
+import ru.sfedu.groupappcontrolhiber.lab5.models.Employee;
 import ru.sfedu.groupappcontrolhiber.lab5.models.Project;
 import ru.sfedu.groupappcontrolhiber.lab5.models.Task;
 import ru.sfedu.groupappcontrolhiber.utils.HibernateUtil;
@@ -22,17 +24,17 @@ public class Lab5Criteria implements Lab5DataProvider{
     }
 
     @Override
-    public Result<Project> getTaskById(long id) {
+    public Result<Address> getProjectById(long id) {
         Session session = getSession();
         try {
             CriteriaBuilder cb = session.getCriteriaBuilder();
-            CriteriaQuery<Project> cq = cb.createQuery(Project.class);
-            Root<Project> root = cq.from(Project.class);
-            cq.select(root);
-            Project task = session.createQuery(cq).getSingleResult();
+            CriteriaQuery<Address> cq = cb.createQuery(Address.class);
+            Root<Address> root = cq.from(Address.class);
+            cq.select(root).where(cb.equal(root.get("id"), id));
+            Address task = session.createQuery(cq).getSingleResult();
             session.close();
             log.info(task.toString());
-            return new Result<>(Outcomes.Complete,task);
+            return new Result<Address>(Outcomes.Complete,task);
         } catch (Exception exception) {
             session.close();
             log.error(exception);

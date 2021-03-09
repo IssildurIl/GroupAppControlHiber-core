@@ -17,8 +17,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @ToString(callSuper = true)
-@Entity(name = "DeveloperTask1")
-@Table(schema = "S2")
+@Entity(name = "DevelopersTaskTPSLab3")
+@Table(schema = "S2",name = "DevelopersTaskTPSLab3")
 public class DevelopersTask extends Task implements Serializable {
 
   private String developerComments;

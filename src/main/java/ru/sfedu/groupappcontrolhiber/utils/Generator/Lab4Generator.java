@@ -1,25 +1,48 @@
 package ru.sfedu.groupappcontrolhiber.utils.Generator;
 
 import ru.sfedu.groupappcontrolhiber.enums.TypeOfEmployee;
+import ru.sfedu.groupappcontrolhiber.lab4.models.Address;
 import ru.sfedu.groupappcontrolhiber.lab4.api.Lab4DataProvider;
 import ru.sfedu.groupappcontrolhiber.lab4.models.Employee;
+import ru.sfedu.groupappcontrolhiber.lab4.models.Inventory;
+import ru.sfedu.groupappcontrolhiber.lab4.models.Item;
 import ru.sfedu.groupappcontrolhiber.utils.Fill;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Lab4Generator {
 
     public static Lab4DataProvider instance = new Lab4DataProvider();
 
-    public Employee lab4Gen(){
-        Employee employee = new Employee();
-        for (int i = 1; i <= 1; i++) {
-            setEmployee(employee, Fill.firstName[i - 1], Fill.lastName[i - 1], Fill.login[i - 1],
-                    Fill.password[i - 1], Fill.email[i - 1],
-                    Fill.token[i - 1], Fill.department[i - 1], TypeOfEmployee.Employee);
+    public void lab4Gen(){
+
+        for (int i = 1; i <= 10; i++) {
+            Item item = new Item();
+            HashSet<String> progLangHS = new HashSet<String>(Arrays.asList(Fill.prLanguages));
+            item.setProgrammingLanguage(progLangHS);
+            item.setTeam(Arrays.asList(Fill.department));
+
+            HashMap<String, String> nameAgeHM = new HashMap<String, String>();
+            nameAgeHM.put(Fill.firstName[i-1], Fill.createdDate[i-1]);
+            item.setMap(nameAgeHM);
+
+            Inventory inventory = new Inventory();
+            inventory.setMark(Fill.inventoryMark[i-1]);
+            inventory.setName(Fill.firstName[i-1]);
+
+            HashMap<String, Inventory> inventoryHashMap = new HashMap<String, Inventory>();
+            inventoryHashMap.put(Fill.taskDescription[i-1],inventory);
+            item.setCustommap(inventoryHashMap);
+
+            Address address = new Address();
+            address.setCity(Fill.addressCity[i-1]);
+            address.setStreet(Fill.addressStreet[i-1]);
+
+            item.setAddress(address);
+
+            instance.save(item);
         }
-        return employee;
+
     }
 
     public static void setEmployee(Employee employee, String firstname,
@@ -36,11 +59,4 @@ public class Lab4Generator {
         employee.setTypeOfEmployee(typeOfEmployee);
     }
 
-    public  List<Employee> getListEmployee(){
-        List<Employee> fullList = new ArrayList<>();
-        for (int i=1;i<=3; i++) {
-            fullList.add(lab4Gen());
-        }
-        return fullList;
-    }
 }

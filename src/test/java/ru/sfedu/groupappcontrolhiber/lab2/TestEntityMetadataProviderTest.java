@@ -2,13 +2,22 @@ package ru.sfedu.groupappcontrolhiber.lab2;
 
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.groupappcontrolhiber.lab3.api.MappedSuperclassDataProvider;
+import ru.sfedu.groupappcontrolhiber.utils.Generator.TestEntityGenerator;
+
 import java.util.Date;
 @Log4j2
 class TestEntityMetadataProviderTest {
 
     private static MappedSuperclassDataProvider instance = new MappedSuperclassDataProvider();
+
+    @BeforeAll
+    static void setEnv() {
+        TestEntityGenerator tg = new TestEntityGenerator();
+        tg.testEntityGen();
+    }
     @Test
     void SaveData(){
         Address homeaddress = new Address();
@@ -36,9 +45,9 @@ class TestEntityMetadataProviderTest {
         testEntity2.setDateCreated(new Date());
         testEntity2.setCheck(true);
         TestEntityMetadataProvider instance = new TestEntityMetadataProvider();
-        instance.saveTestEntity(testEntity);
-        instance.saveTestEntity(testEntity1);
-        instance.saveTestEntity(testEntity2);
+        instance.save(testEntity);
+        instance.save(testEntity1);
+        instance.save(testEntity2);
     }
 
 
@@ -50,20 +59,20 @@ class TestEntityMetadataProviderTest {
         testEntity.setDescription("description is bruh");
         testEntity.setDateCreated(new Date());
         testEntity.setCheck(true);
-        instance.saveTestEntity(testEntity);
-        instance.deleteTestEntity(testEntity);
+        instance.save(testEntity);
+        instance.delete(testEntity);
     }
 
     @Test
     void getById(){
         TestEntityMetadataProvider instance = new TestEntityMetadataProvider();
-        log.info(instance.getById(1L));
-        Assertions.assertEquals("Test41",instance.getById(1L).getName());
+        log.info(instance.getById( TestEntity.class,1L));
+        Assertions.assertEquals("Test41",instance.getById(TestEntity.class,1L).getData().getName());
     }
     @Test
     void getByIdFail(){
         TestEntityMetadataProvider instance = new TestEntityMetadataProvider();
-        Assertions.assertEquals(null,instance.getById(100L));
+        Assertions.assertNull(instance.getById(TestEntity.class, 100L).getData());
     }
 
 }

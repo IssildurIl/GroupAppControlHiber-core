@@ -17,8 +17,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @ToString(callSuper = true)
-@Entity(name = "Developer2")
-@Table(schema = "S3")
+@Entity(name = "DeveloperJTLab3")
+@Table(schema = "S3",name = "DeveloperJTLab3")
 public class Developer extends Employee implements Serializable {
   private TypeOfDevelopers status;
   private ProgrammingLanguage programmingLanguage;

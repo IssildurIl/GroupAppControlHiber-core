@@ -18,8 +18,8 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @ToString(callSuper = true)
-@Entity(name = "TestersTask3")
-@Table(schema = "S4")
+@Entity(name = "TestersTaskSTLab3")
+@Table(schema = "S4",name = "TestersTaskSTLab3")
 public class TestersTask extends Task implements Serializable {
   private BugStatus bugStatus;
   private String bugDescription;

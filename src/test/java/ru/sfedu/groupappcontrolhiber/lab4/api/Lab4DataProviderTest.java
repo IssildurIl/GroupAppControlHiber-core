@@ -6,6 +6,7 @@ import ru.sfedu.groupappcontrolhiber.lab4.models.Address;
 import ru.sfedu.groupappcontrolhiber.lab4.models.Inventory;
 import ru.sfedu.groupappcontrolhiber.lab4.models.Item;
 import ru.sfedu.groupappcontrolhiber.utils.Fill;
+import ru.sfedu.groupappcontrolhiber.utils.Generator.Lab4Generator;
 
 
 import java.util.Arrays;
@@ -17,6 +18,8 @@ class Lab4DataProviderTest {
 
     @BeforeAll
     static void setEnv() {
+        Lab4Generator gen = new Lab4Generator();
+        gen.lab4Gen();
     }
 
 
